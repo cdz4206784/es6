@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        let a = 1;
+        let promise = new Promise(function(resolve,reject){
+            if(a == 10){
+                resolve('成功');
+            }else{
+                reject('失败鸟');
+            }
+            // resolve 成功时调用
+            // reject 失败时调用
+        })
+
+        promise.then(res=>{
+            console.log(res);
+        }).catch(err=>{
+            console.log(err);
+        })
+
+        new Promise().then(res=>{
+
+        }).catch(err=>{
+
+        });
+
+
+        Promise.resolve('aa'); //将现有的东西，转成Promise对象，resolve状态，成功状态
+        Promise.rejecct('aaa'); //将现有的东西，转成Promise对象，reject状态，失败状态
+        
+
+    </script>
+</head>
+<body>
+</body>
+</html>
